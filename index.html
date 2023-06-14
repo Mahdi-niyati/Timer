@@ -5,8 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+         html , input , button {
+            font-family: "Vazir" !important;
+            direction: rtl;
+         }
+         .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+         }
+         .start-box {
+            margin: 20px 0;
+         }
+         .start-box #input-counter {
+            padding: 7px;
+            width: 300px;
+            outline-color: black;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            border-radius: 2px;
+         }
+         .start-box #start-counter {
+            border: none;
+            padding: 7PX 10PX;
+            cursor: pointer;
+            background: #e74c3c;
+            color: white;
+            border-radius: 2px;
+         }
+
+         .message {
+            margin-top: 10px;
+            font-size: .9rem;
+         }
+
+         .message .loading {
+            color: #e74c3c;
+         }
+
+         .message .succes {
+            color: #27ae60;
+         }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="start-box">
+            <input type="text" id="input-counter" placeholder="زمان مورد نظر را به ثانیه وارد کنید">
+            <button class="start-counter">شروع</button>
+        </div>
+        <div class="c100 p50">
+            <span>250</span>
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+        <div class="message">
+            <span class="loading">در حال اجرا ...</span>
+            <span class="success">شمارنده به پایان رسید </span>
+        </div>
+    </div>
 </body>
 </html>
