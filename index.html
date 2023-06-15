@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-code-font@v1.1.2/dist/font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./styles.css">
     <style>
          html , input , button {
@@ -43,10 +44,26 @@
 
          .message .loading {
             color: #e74c3c;
+            display: none;
          }
 
-         .message .succes {
+         .message .success {
             color: #27ae60;
+            display: none;
+         }
+
+         #error-message {
+            color: #e74c3c;
+            font-size: .9rem;
+            display: none;
+         }
+
+         #error-message.active {
+            display: block;
+         }
+
+         .c100 {
+            display: none;
          }
     </style>
 </head>
@@ -54,8 +71,9 @@
     <div class="container">
         <div class="start-box">
             <input type="text" id="input-counter" placeholder="زمان مورد نظر را به ثانیه وارد کنید">
-            <button class="start-counter">شروع</button>
+            <button id="start-counter">شروع</button>
         </div>
+        <div id="error-message"></div>
         <div class="c100 p50">
             <span>250</span>
             <div class="slice">
@@ -68,5 +86,6 @@
             <span class="success">شمارنده به پایان رسید </span>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
